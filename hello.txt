@@ -1,0 +1,49 @@
+hello git222222
+
+hello git
+hello git
+hello git
+hello git
+hello git
+hello git
+hello git
+hello git
+hello git
+hello git
+hello git
+hello git
+hello git
+hello git
+hello git
+hello git
+hello git
+hello git
+hello git
+hello git
+
+查看版本号两种方法
+[]git reflog（查看精简版本信息）
+[]git log（详细，包括修订作者）
+Vim hello.txt进入工作区后，按i 进入编辑模式
+cat hello.txt 显示工作内容（显示工作区内容，一般会是最新版本）
+
+基本修改保存流程：vim hello.txt进入工作区，按i进入编辑模式，编辑完成后 :+esc+wq 退出，git status 查看文件被追踪状态，如果是红色显示未被追踪状态，git add hello.txt 使文件变成已追踪状态，再次git status确认一下，就可以开始git commit -m “日志日期”hello.txt ,再用两个查询版本工具git reflog 和git log中的一个来查询版本信息。
+
+版本穿梭：(其实就是底层Head指针）
+案例实操就是觉得以前的版本好，可以自由穿梭各个版本进行查看修改。
+先git reflog 或者git log 查看历史版本，选中你想要的，查看对应的版本号（git reflog查看的为精简的版本号，git log查看的为具体的版本号，两者都行）
+切换版本号操作：
+git reset - -hard 版本号（直接复制过来）
+然后再次git reflog或者git log后就会看到指针指向这个版本了（就是
+那个Head->master
+
+分支
+git branch -v    查看当前分支
+git branch 分支名   创建分支
+git checkout 分支名    切换分支
+git merge 分支名     把指定的分支合并到当前分支上
+合并后在分支修改后的内容也会显示在主支上。
+
+冲突合并
+为什么会发生冲突：合并分支时，两个分支在同一个文件的同一个位置有两套不同的修改，git无法帮助我们选择哪一个，所以需要我们人为修改。
+hello git
